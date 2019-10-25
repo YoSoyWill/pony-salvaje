@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('/w3images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Hola :)</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black w3-center">presione aquí</button>
+</p>
+  </div>
+
+</div>
+<div class="w3-container">
+
+
+
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-red"> 
+        
+        <h2 class="w3-center">TE AMO</h2>
+      </header>
+      <div class="w3-container">
+        <table class="w3-table">
+    <tr>
+      <td><p class="w3-right w3-jumbo">X</p></td>
+      <td><p class="w3-left w3-jumbo" id="pulsaciones">1</p></td>
+    </tr>
+
+  </table>
+
+        	
+      </div>
+      <footer class="w3-container w3-black">
+        <p class="w3-center" id="item">empezamos</p>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var contador=1;
+var myArray = ['hasta el infinito y mas allá', 'ya va el intenso', 'Busque brete', 'Hola', 'Pony Salvaje', '¿hasta cuanto llega?', 'te mamo', '¿va a seguir?', 'aunque no se peine', 'aunque no me peine', 'aunque no se lo diga', 'aunque no sea bueno demostrandolo', 'ya debería saberlo', 'tengo hambre', 'Activo=pasivo+capital', 'te amo, pero ya eso lo dice arriba', 'X 10, en realidad no se por cual irá, es un batazo', '¿ya se cansó?', 'tengo calocha', 'te mamo', 'te amo', 'ya no se que escribir', 'Cantaré una canción: "Los pollitos dicen, pio pio pio', 'Harry es puto :D', 'aunque sea una pedorra', '¿Por qué llama la llama?', '¿por cual va?', 'te amo', 'debería estar trabajando', 'sigo con hambre', 'le van a salir frases mielero copiadas de google', 'Ni el chocolate me sabe dulce una vez que te he besado', 'Si hay algo que más me gusta que tu sonrisa, es cuando sonríes el verme cariño', 'Siempre he soñado con besar a una estrella, pero al besarte me he dado cuenta de que ya lo he conseguido, ya que tú eres mi estrella', 'A tu lado las horas son segundo, pero sin tu compañía los segundos pasan a ser horas', 'No puedo darte lo mejor del mundo, pero te voy a dar… te voy a dar', 'Pensaba que había salido el Sol, pero ahora me he dado cuenta de que simplemente es que has sonreído', 'Hombre que cocina atrae, pero si también lava los platos, enamora…', 'le voy a hacer huevito con frijoles', 'amor, yo te ofrezco mi estufa, no tiene pilas ni cables, pero igualmente se enchufa', 'Tú, por la mañana, despeinada. Eso es la felicidad.', 'Así, tal cual eres, me encantas', 'Mi plan era no enamorarme, peor me sonreíste y lo arruinaste.', 'Si no tardas mucho, te espero toda la vida.', 'Me gustas, me gustas, me gustas, me gustas... ¿sabes que me gustas?', 'con cuerpo de pony', 'Hay vida en tu vida (Ah-ah-ah-ah)', 'Pero, igual, eres pony (Ah-ah-ah-ah)', 'te amo', 'Quisiera ser pirata no por el oro ni la plata sino por ese tesoro que tienes entre las patas…', 'Tus ojos son dos luceros, tus mejillas dos manzanas, ¡qué linda ensalada de frutas haríamos con mi banana!', 'Mi amor, sentirás olor a esencia pués me acercaré con gran disimulo y un poco más notarás mi presencia cuando te la meta por el culo…', 'Que bellos son tus ojos ojos, que bella es tu mirada, que bellos tus labios rojos mientras me haces una mamada!', 'te amo', 'te amo', 'te amo'];    
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    var item = myArray[(Math.random()*myArray.length)|0];
+    document.getElementById("item").innerHTML= item
+    document.getElementById("pulsaciones").innerHTML = contador + 1
+			contador++;
+  }
+}
+
+
+</script>
+
+</body>
+</html>
